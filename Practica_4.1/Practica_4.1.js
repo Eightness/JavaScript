@@ -125,13 +125,13 @@ function ejercicio3() {
 
 function ejercicio4() {
     var numero = parseInt(prompt("Introduce un número entero positivo: "))
-    var resultado;
+    var resultado = 0;
 
-    for (let index = numero; index <= (numero + 100); index++) {
+    for (let index = numero; index < (numero + 100); index++) {
         resultado += index 
     }
 
-    document.write("La suma de los 100 números siguientes a " + numero + " es: " + resultdao);
+    document.write("La suma de los 100 números siguientes a " + numero + " es: " + resultado);
 }
 
 //EJERCICIO 5
