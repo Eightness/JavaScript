@@ -2,7 +2,9 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Práctica 4.3</title>
+        <title>My Anime List - Albert Lozano</title>
+        <script src="Practica_4.5.js"></script>
+        <link rel="stylesheet" href="Practica_4.5.css">
     </head>
 
     <body>
@@ -31,6 +33,58 @@
             -Añade en la parte derecha el trailer que viene como dato en la respuesta JSON.
             -IMPORTANTE: pondremos a nuestra página "un filtro de control parental", filtrando toda consulta que contenga contenido "Hentai". Si al hacer una consulta la página no pasará el filtro se volvería a realizar una nueva consulta.
         -->
+
+        <div class="tituloPagina">
+            <a href="Practica_4.5.html"><img src="images/MyAnimeList_small.png" alt="My Anime List"></a>
+        </div>
+
+        <div class="contenedor">
+
+            <div id="divTitulo">
+                <h2 id="titulo">Bleach</h2>
+                <p>También conocido como:</p>
+                <ul id="listaTitulos">
+                    <li id="titulo1"></li>
+                    <li id="titulo2"></li>
+                    <li id="titulo3"></li>
+                </ul>
+            </div>
+
+            <div id="divCaracteristicas">
+                <h2 id="informacionAdicional">Información adicional</h2>
+                <ul id="listaCaracteristicas">
+                    <li>Tipo de manga: </li>
+                    <li>Fuente: </li>
+                    <li>Episodios: </li>
+                    <li>Comienzo emisión: </li>
+                    <li>Fin emisión: </li>
+                    <li>Duración: </li>
+                    <li>Clasificación: </li>
+                    <li>Nota: </li>
+                    <li>Géneros: </li>
+                </ul>
+            </div>
+
+            <div id="divSinopsis">
+                <h2 id="sinopsis">Sinopsis</h2>
+                <p id="textoSinopsis"></p>
+            </div>
+
+            <div id="divImagen">
+
+            </div>
+
+            <div id="divTrailer">
+
+            </div>
+
+        </div>
+
+        <script>
+            window.onload = function() {
+                myAnimeList();
+            }
+        </script>
 
     </body>
 

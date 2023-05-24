@@ -37,9 +37,10 @@ button {
     margin-top: 20px;
 }
 
-.input-group {
+.input-group, #colorLetra, #colorFondo {
     display: flex;
     align-items: center;
+    margin: 5px;
 }
 
 .input-group input {
