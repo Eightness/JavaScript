@@ -10,31 +10,6 @@
 
     <body>
 
-        <!-- 
-        Página llamada "My Anime List".
-        Consultará una API Web de series de anime, analizará y formateará los resultados JSON.
-        Las consultas se realizarán a la web: http://api.jikan.moe/v4/random/anime 
-        Devolverá una respuesta JSON con toda la información de la serie manga, y que será aleatoria y diferente en cada consulta.
-
-        Añade a tu página, al menos, las siguientes características:
-            -Pon un fondo a tu página y un título.
-            -Añade en la izquierda una zona donde aparezca el título principal, así como títulos alternativos que pudiera tener el anime. Ten en cuenta que el número variará según el anime.
-            -Añade información adicional. Al menos muestra:
-                -Tipo de manga.
-                -Fuente.
-                -Episodios.
-                -Comienzo emisión: pon la fecha de comienzo de emisión en formato dia/mes/año.
-                -Fin emisión: pon la fecha de fin de emisión en formato dia/mes/año.
-                -Duración.
-                -Clasificación.
-                -Nota.
-                -Géneros: pon una lista de géneros en una sola línea.
-            -Añade la sinopsis de la serie.
-            -Añade en la parte derecha la imagen que viene como dato en la respuesta JSON.
-            -Añade en la parte derecha el trailer que viene como dato en la respuesta JSON.
-            -IMPORTANTE: pondremos a nuestra página "un filtro de control parental", filtrando toda consulta que contenga contenido "Hentai". Si al hacer una consulta la página no pasará el filtro se volvería a realizar una nueva consulta.
-        -->
-
         <img class="branch1" src="images/Japanese_Branch.png" alt="">
         <img class="branch2" src="images/Japanese_Branch.png" alt="">
 
@@ -45,27 +20,27 @@
         <div class="contenedor">
 
             <div id="divTitulo">
-                <h2 id="titulo"></h2>
+                <h2 class="titulo"></h2>
                 <p>También conocido como:</p>
                 <ul id="listaTitulos">
-                    <li id="titulo1"></li>
-                    <li id="titulo2"></li>
-                    <li id="titulo3"></li>
+                    <li class="titulo"></li>
+                    <li id="tituloJapones"></li>
+                    <li id="tituloIngles"></li>
                 </ul>
             </div>
 
             <div id="divCaracteristicas">
                 <h2 id="informacionAdicional">Información adicional</h2>
                 <ul id="listaCaracteristicas">
-                    <li>Tipo de manga: </li>
-                    <li>Fuente: </li>
-                    <li>Episodios: </li>
-                    <li>Comienzo emisión: </li>
-                    <li>Fin emisión: </li>
-                    <li>Duración: </li>
-                    <li>Clasificación: </li>
-                    <li>Nota: </li>
-                    <li>Géneros: </li>
+                    <li id="tipoManga">Tipo de manga: </li>
+                    <li id="fuente">Fuente: </li>
+                    <li id="episodios">Episodios: </li>
+                    <li id="comienzoEmision">Comienzo emisión: </li>
+                    <li id="finEmision">Fin emisión: </li>
+                    <li id="duracion">Duración: </li>
+                    <li id="clasificacion">Clasificación: </li>
+                    <li id="nota">Nota: </li>
+                    <li id="generos">Géneros: </li>
                 </ul>
             </div>
 
@@ -85,9 +60,7 @@
         </div>
 
         <script>
-            window.onload = function() {
-                myAnimeList();
-            }
+            myAnimeList();
         </script>
 
     </body>
