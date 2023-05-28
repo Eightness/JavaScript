@@ -133,10 +133,6 @@ function myAnimeList() {
           }
         }
 
-        for (let index = 0; index < listaGeneros.length; index++) {
-            elementoGeneros.innerHTML += listaGeneros[index].name + ".";
-        }
-
         const elementoImagen = document.getElementById("imagen");
         elementoImagen.src = urlImagen;
 
