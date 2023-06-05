@@ -194,4 +194,131 @@ function ejercicio14() {
 
 //---------------------------------------------------------
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      width: 65%;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 300px;
+      height: 30px;
+      padding: 5px;
+    }
+
+    select {
+      width: 100px;
+      height: 30px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Formulario</h1>
+
+    <label>
+      Selector:
+      <select id="selector" onchange="selectPersona()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </label>
+
+    <label>
+      Nombre:
+      <input type="text" id="nombre" required>
+    </label>
+
+    <label>
+      Email:
+      <input type="text" id="email" required>
+    </label>
+
+    <label>
+      Fecha de Nacimiento:
+      <input type="text" id="fecha_nacimiento" required>
+    </label>
+
+    <label>
+      Dirección:
+      <textarea id="direccion" required></textarea>
+    </label>
+
+    <label>
+      Imagen Inicial:
+      <img id="imagen" src="" alt="Imagen inicial">
+    </label>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script>
+    const json = {
+      "personas": [
+        {
+          "nombre": "Persona 1",
+          "email": "persona1@example.com",
+          "fecha_nacimiento": "01/01/1990",
+          "direccion": "Calle 1, Ciudad",
+          "imagen": "imagen1.png"
+        },
+        {
+          "nombre": "Persona 2",
+          "email": "persona2@example.com",
+          "fecha_nacimiento": "02/02/1991",
+          "direccion": "Calle 2, Ciudad",
+          "imagen": "imagen2.png"
+        },
+        {
+          "nombre": "Persona 3",
+          "email": "persona3@example.com",
+          "fecha_nacimiento": "03/03/1992",
+          "direccion": "Calle 3, Ciudad",
+          "imagen": "imagen3.png"
+        },
+        // Agrega más personas aquí según sea necesario
+      ]
+    };
+
+    function selectPersona() {
+      const selector = document.getElementById("selector");
+      const index = parseInt(selector.value);
+
+
 
