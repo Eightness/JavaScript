@@ -256,11 +256,11 @@ function ejercicio10() {
 
     if (creciente) {
         for (var i = numeroA; i <= numeroB; i++) {
-            document.write(i);
+            document.writeln(i);
         }
     } else {
         for (var i = numeroA; i >= numeroB; i--) {
-            document.write(i);
+            document.writeln(i);
         }
     }
 }
@@ -272,7 +272,7 @@ function ejercicio10() {
 function ejercicio11() {
     for (var i = 50; i <= 100; i++) {
         if (i % 5 === 0) {
-          document.write(i);
+          document.write(i + " ");
         }
       }
 }
@@ -288,7 +288,7 @@ function ejercicio12() {
 
     for (var i = a; i <= b; i++) {
         if (i % x === 0) {
-            document.write(i);
+            document.write(i + " ");
         }
     }
 }

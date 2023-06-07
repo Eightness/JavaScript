@@ -85,7 +85,78 @@ function practica2() {
 //EJERCICIO 1
 
 function ejercicio1() {
-
+    // Definición del objeto Persona
+    var Persona = {
+        nombre: "",
+        apellidos: "",
+        edad: 0,
+        padre: null,
+        madre: null,
+        hermanos: [],
+        set_padre: function(nombrePadre) {
+        this.padre = nombrePadre;
+        },
+        set_madre: function(nombreMadre) {
+        this.madre = nombreMadre;
+        },
+        add_hermano: function(nombreHermano) {
+        this.hermanos.push(nombreHermano);
+        }
+    };
+    
+    // Creación de la familia Stark
+    var nedStark = Object.create(Persona);
+    nedStark.nombre = "Ned";
+    nedStark.apellidos = "Stark";
+    nedStark.edad = 45;
+    
+    var catelynTully = Object.create(Persona);
+    catelynTully.nombre = "Catelyn";
+    catelynTully.apellidos = "Tully";
+    catelynTully.edad = 42;
+    
+    var robStark = Object.create(Persona);
+    robStark.nombre = "Rob";
+    robStark.apellidos = "Stark";
+    robStark.edad = 20;
+    
+    var jonSnow = Object.create(Persona);
+    jonSnow.nombre = "Jon";
+    jonSnow.apellidos = "Snow";
+    jonSnow.edad = 18;
+    
+    var sansaStark = Object.create(Persona);
+    sansaStark.nombre = "Sansa";
+    sansaStark.apellidos = "Stark";
+    sansaStark.edad = 16;
+    
+    nedStark.set_padre("Desconocido"); // No se conoce el nombre del padre
+    nedStark.set_madre("Desconocida"); // No se conoce el nombre de la madre
+    
+    robStark.set_padre(nedStark.nombre);
+    robStark.set_madre(catelynTully.nombre);
+    
+    jonSnow.set_padre(nedStark.nombre);
+    jonSnow.set_madre(catelynTully.nombre);
+    
+    sansaStark.set_padre(nedStark.nombre);
+    sansaStark.set_madre(catelynTully.nombre);
+    
+    robStark.add_hermano(jonSnow.nombre);
+    robStark.add_hermano(sansaStark.nombre);
+    
+    jonSnow.add_hermano(robStark.nombre);
+    jonSnow.add_hermano(sansaStark.nombre);
+    
+    sansaStark.add_hermano(robStark.nombre);
+    sansaStark.add_hermano(jonSnow.nombre);
+    
+    // Recorriendo los hermanos de Jon Snow
+    alert("Hermanos de Jon Snow:");
+    jonSnow.hermanos.forEach(function(hermano) {
+        alert(hermano);
+    });
+  
 }
 
 //---------------------------------------------------------
@@ -193,132 +264,3 @@ function ejercicio14() {
 }
 
 //---------------------------------------------------------
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Formulario</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    form {
-      width: 65%;
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-    }
-
-    label {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 300px;
-      height: 30px;
-      padding: 5px;
-    }
-
-    select {
-      width: 100px;
-      height: 30px;
-    }
-
-    img {
-      width: 100px;
-      height: 100px;
-    }
-  </style>
-</head>
-<body>
-  <form>
-    <h1>Formulario</h1>
-
-    <label>
-      Selector:
-      <select id="selector" onchange="selectPersona()">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </label>
-
-    <label>
-      Nombre:
-      <input type="text" id="nombre" required>
-    </label>
-
-    <label>
-      Email:
-      <input type="text" id="email" required>
-    </label>
-
-    <label>
-      Fecha de Nacimiento:
-      <input type="text" id="fecha_nacimiento" required>
-    </label>
-
-    <label>
-      Dirección:
-      <textarea id="direccion" required></textarea>
-    </label>
-
-    <label>
-      Imagen Inicial:
-      <img id="imagen" src="" alt="Imagen inicial">
-    </label>
-
-    <input type="submit" value="Enviar">
-  </form>
-
-  <script>
-    const json = {
-      "personas": [
-        {
-          "nombre": "Persona 1",
-          "email": "persona1@example.com",
-          "fecha_nacimiento": "01/01/1990",
-          "direccion": "Calle 1, Ciudad",
-          "imagen": "imagen1.png"
-        },
-        {
-          "nombre": "Persona 2",
-          "email": "persona2@example.com",
-          "fecha_nacimiento": "02/02/1991",
-          "direccion": "Calle 2, Ciudad",
-          "imagen": "imagen2.png"
-        },
-        {
-          "nombre": "Persona 3",
-          "email": "persona3@example.com",
-          "fecha_nacimiento": "03/03/1992",
-          "direccion": "Calle 3, Ciudad",
-          "imagen": "imagen3.png"
-        },
-        // Agrega más personas aquí según sea necesario
-      ]
-    };
-
-    function selectPersona() {
-      const selector = document.getElementById("selector");
-      const index = parseInt(selector.value);
-
-
-

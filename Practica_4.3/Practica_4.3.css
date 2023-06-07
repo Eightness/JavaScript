@@ -1,56 +1,28 @@
-.contenedor {
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px;
+.body {
     margin: 0 auto;
-}
-
-.izquierda {
-    flex: 1;
-    order: 1;
-    margin: 20px;
     width: 50%;
 }
-
-textarea {
-    font-size: 16px;
-    width: 100%;
-    height: 100%;
+#input-text {
+    float: left;
+    margin-right: 50px;
+    width: 250px;
+    height: 275px;
 }
-
-.derecha {
-    flex: 1;
-    order: 2;
+.form{
+    margin-left: 350px;
+    padding: 15px;
+    border: 1px solid black;
+    width: 500px;
+    height: 250px;
     background-color: cornflowerblue;
-    width: 50%;
-    height: 100%;
+}
+#responsive-border-letter{
+    border: 1px solid;
     padding: 10px;
-    margin: 20px;
-    border: 2px solid blue;
+    margin-bottom: 5px;
 }
-
-h3 {
-    margin-top: 10px;
-}
-
-button {
-    margin-top: 20px;
-}
-
-.input-group, #colorLetra, #colorFondo {
-    display: flex;
-    align-items: center;
-    margin: 5px;
-}
-
-.input-group input {
-    margin-left: 20px;
-}
-
-#estiloFuente {
-    margin-top: 15px;
-}
-
-#boton {
-    margin-top: 10px;
+#responsive-border-bg{
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 5px;
 }
